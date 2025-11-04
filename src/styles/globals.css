@@ -1,0 +1,42 @@
+/* 🎨 Custom Global Color Variables */
+:root {
+  --primary-color: #16a34a; /* green-600 */
+  --primary-hover: #15803d; /* green-700 */
+  --bg-color: #f9fafb; /* gray-50 */
+  --text-color: #1f2937; /* gray-800 */
+  --muted-text: #6b7280; /* gray-500 */
+  --border-color: #d1d5db; /* gray-300 */
+}
+
+/* 🌍 Global Utility Classes */
+
+  /* Backgrounds */
+  .bg-primary {
+    background-color: var(--primary-color);
+  }
+  .bg-primary-hover:hover {
+    background-color: var(--primary-hover);
+  }
+  .bg-app {
+    background-color: var(--bg-color);
+  }
+
+  /* Text */
+  .text-primary {
+    color: var(--primary-color);
+  }
+  .text-muted {
+    color: var(--muted-text);
+  }
+  .text-default {
+    color: var(--text-color);
+  }
+
+  /* Borders */
+  .border-primary {
+    border-color: var(--primary-color);
+  }
+  .border-default {
+    border-color: var(--border-color);
+  }
+
