@@ -22,8 +22,8 @@ const quickActionsData = [
   { label: "Profile Settings", icon: FaCog },
 ];
 
-// Reusable Button
-const Button = (children, className = "", ...props ) => {
+// ✅ Fixed Reusable Button Component
+const Button = ({ children, className = "", ...props }) => {
   return (
     <button
       className={`px-4 py-2 rounded-md border border-gray-300 hover:bg-gray-100 transition flex items-center justify-center ${className}`}
@@ -34,8 +34,8 @@ const Button = (children, className = "", ...props ) => {
   );
 };
 
-// Reusable Card
-const Card = (children, className = "" ) => {
+// ✅ Fixed Reusable Card Component
+const Card = ({ children, className = "" }) => {
   return (
     <div className={`bg-white shadow rounded-lg p-6 ${className}`}>
       {children}
@@ -46,7 +46,7 @@ const Card = (children, className = "" ) => {
 const FarmerDashboard = () => {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Navbar/>
+      <Navbar />
 
       <main className="flex-1 container mx-auto px-4 py-8">
         {/* Header */}
@@ -55,6 +55,7 @@ const FarmerDashboard = () => {
             <h1 className="text-3xl font-bold mb-2">Farmer Dashboard</h1>
             <p className="text-gray-500">Welcome back! Manage your crops and orders.</p>
           </div>
+
           <div className="flex gap-2">
             <Button>
               <FaBell className="mr-2" /> Notifications
@@ -88,9 +89,7 @@ const FarmerDashboard = () => {
           <Card className="lg:col-span-2">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-xl font-bold">Recent Listings</h2>
-              <Button variant="ghost" size="sm">
-                View All
-              </Button>
+              <Button>View All</Button>
             </div>
             <div className="space-y-4">
               {recentListingsData.map((listing, idx) => (
